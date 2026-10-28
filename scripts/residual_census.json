@@ -536,7 +536,7 @@
      "name": "ProximityGap.strictCoeffPolysResidual_of_commonAgreement",
      "kind": "theorem",
      "file": "ArkLib/Data/CodingTheory/ProximityGap/BCIKS20/Curves/CoeffExtractionResidual.lean",
-     "line": 74,
+     "line": 79,
      "conditional_on_residuals": [
       "CurveCommonAgreementResidual"
      ],
@@ -1353,7 +1353,7 @@
    "name": "CurveCommonAgreementResidual",
    "fq_name": "ProximityGap.CurveCommonAgreementResidual",
    "file": "ArkLib/Data/CodingTheory/ProximityGap/BCIKS20/Curves/CoeffExtractionResidual.lean",
-   "line": 43,
+   "line": 48,
    "providers": [
     {
      "name": "ProximityGap.curveCommonAgreementResidual_of_one_le_mul",
@@ -1407,6 +1407,15 @@
      "kind": "theorem",
      "file": "ArkLib/Data/CodingTheory/ProximityGap/BCIKS20/Curves/CanonicalCoeffExtractionRefutation.lean",
      "line": 530,
+     "conditional_on_residuals": [],
+     "extra_explicit_binders": [],
+     "ambiguous_name_match": false
+    },
+    {
+     "name": "ProximityGap.CurveCommonAgreementRefutation.not_curveCommonAgreementResidual",
+     "kind": "theorem",
+     "file": "ArkLib/Data/CodingTheory/ProximityGap/BCIKS20/Curves/CurveCommonAgreementRefutation.lean",
+     "line": 336,
      "conditional_on_residuals": [],
      "extra_explicit_binders": [],
      "ambiguous_name_match": false
