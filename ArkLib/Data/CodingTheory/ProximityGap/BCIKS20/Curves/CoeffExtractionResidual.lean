@@ -42,7 +42,9 @@ this geometric one by pure Lagrange interpolation (`RS_coeffPolys_of_commonAgree
 adversarial decoder, which the universal quantifier over `P` permits; the geometric statement
 survives only after fixing the decoder canonically or restricting to unique decoding. The
 reduction below is therefore a conditional reduction from a refuted hypothesis, not a route to
-the strict residual as stated. -/
+the strict residual as stated. The same instance is refuted independently, by factoring it
+through `StrictCoeffPolysResidual`, by
+`ProximityGap.StrictCanonicalCoeffPolysRefutation.not_curveCommonAgreementResidual`. -/
 def CurveCommonAgreementResidual {k deg : ℕ} {domain : ι ↪ F} {δ : ℝ≥0} : Prop :=
   ∀ (_hk : 0 < k) (u : WordStack F (Fin (k + 1)) ι),
     Pr_{
@@ -71,7 +73,9 @@ polynomials in the curve parameter) follows from the transparent geometric resid
 `CurveCommonAgreementResidual` (the decoded family has large common agreement with `k+1` sampled
 decodings), via the bivariate Lagrange lift `RS_coeffPolys_of_commonAgreement`. This isolates
 the genuinely deep BCIKS Johnson-radius counting (the common agreement) from the mechanical
-interpolation, which is fully discharged. -/
+interpolation, which is fully discharged. The hypothesis is refuted as stated (see the status
+note on `CurveCommonAgreementResidual`), so this is a conditional reduction from a false premise
+and does not by itself discharge `StrictCoeffPolysResidual`. -/
 theorem strictCoeffPolysResidual_of_commonAgreement {k deg : ℕ} {domain : ι ↪ F} {δ : ℝ≥0}
     [NeZero deg]
     (h : CurveCommonAgreementResidual (k := k) (deg := deg) (domain := domain) (δ := δ)) :
